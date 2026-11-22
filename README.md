@@ -48,3 +48,21 @@ Abrir `http://localhost:3000` en el navegador.
 ## Contexto académico
 
 Proyecto desarrollado para la asignatura **Análisis Numérico**, correspondiente a la carrera de Ingeniería en Sistemas.
+
+## Despliegue en Vercel
+
+El proyecto incluye `vercel.json` con la configuración necesaria para Vite:
+
+- Framework: Vite
+- Comando de construcción: `npm run build`
+- Directorio de salida: `dist`
+- Redirección SPA: todas las rutas se sirven desde `/index.html`
+
+Para desplegarlo desde la cuenta de Vercel:
+
+1. Importar el repositorio `omar-gitH/metodo_relajacion`.
+2. Verificar que Vercel detecte el framework **Vite**.
+3. Mantener `npm run build` como comando de construcción.
+4. Mantener `dist` como directorio de salida.
+5. Configurar las variables de entorno necesarias en **Settings → Environment Variables**.
+6. Ejecutar **Deploy**.
