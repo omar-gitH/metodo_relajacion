@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Source Serif 4", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-navy: #1E3A8A;
+  --color-navy-dark: #172554;
+  --color-crimson: #991B1B;
+  --color-paper: #F8FAFC;
+  --color-ink: #0F172A;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    font-size: 100%;
+    color: #0F172A;
+    background-color: #F8FAFC;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-size: 1.0625rem; /* 17px base */
+    line-height: 1.75;
+    color: #0F172A;
+    background-color: #F8FAFC;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    text-wrap: balance;
+    letter-spacing: -0.02em;
+  }
+
+  /* Encabezado principal de cada pestaña (h2) con divisor y acento académico */
+  article > header {
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #E2E8F0;
+    position: relative;
+  }
+
+  article > header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 5rem;
+    height: 3px;
+    background: linear-gradient(90deg, #1E3A8A 0%, #312E81 100%);
+    border-radius: 9999px;
+  }
+
+  article > header h2 {
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+    color: #0F172A;
+  }
+
+  /* Subtítulos de sección numerados con divisor inferior sutil */
+  article h3[id]:not(#config-heading):not(#input-grid-heading) {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: #1E3A8A;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #E2E8F0;
+  }
+
+  article h4 {
+    font-weight: 600;
+    letter-spacing: -0.015em;
+  }
+}
+
+/* ---------- Fórmulas matemáticas (KaTeX) ---------- */
+.katex {
+  font-size: 1.15em;
+  color: #0F172A;
+}
+
+.katex-display {
+  font-size: 1.25em;
+  margin: 1.15rem 0;
+  padding: 0.85rem 0.5rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.katex-display > .katex {
+  font-size: 1em; /* Evita multiplicar 1.25em × 1.15em en bloques display */
+}
+
+.katex-html {
+  padding-block: 0.12em;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline-color: #1E3A8A;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

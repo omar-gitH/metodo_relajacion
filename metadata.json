@@ -1,0 +1,6 @@
+{
+  "name": "Método de Relajación — Análisis Numérico",
+  "description": "Plataforma académica interactiva sobre el Método de Relajación para la resolución iterativa de sistemas de ecuaciones lineales en Análisis Numérico.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
